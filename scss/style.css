@@ -73,6 +73,10 @@ body {
 .navbar .real-nav .notifications {
   display: flex;
 }
+.navbar .real-nav .notifications i {
+  margin: 0 10px;
+  font-size: 20px;
+}
 .navbar .real-nav .profile-icon {
   display: flex;
   justify-content: center;
