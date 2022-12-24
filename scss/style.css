@@ -332,4 +332,38 @@ body {
 }
 .page .container .right-page .peoples .profiles .profile h2 {
   font-weight: 600;
+}
+.page .container .right-page .more {
+  text-align: center;
+  margin-top: 50px;
+}
+.page .container .right-page .more .header {
+  font-size: 20px;
+}
+.page .container .right-page .more .profile-slider {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.page .container .right-page .more .profile-slider img {
+  border-radius: 50%;
+}
+.page .container .right-page .more .profile-slider .slider-btn {
+  width: 30px;
+  height: 30px;
+}
+.page .container .right-page .more .profile-slider .slider-btn i {
+  font-size: 25px;
+  transition: 0.3s all;
+}
+.page .container .right-page .more .profile-slider .slider-btn i:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.page .container .right-page .more .profile-info {
+  width: 100%;
+  text-align: center;
+  line-height: 10px;
 }/*# sourceMappingURL=style.css.map */

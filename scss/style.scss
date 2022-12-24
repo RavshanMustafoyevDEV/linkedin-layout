@@ -425,6 +425,48 @@ body{
                     }
                 }
             }
+
+            .more{
+                text-align: center;
+                margin-top: 50px;
+
+                .header{
+                    font-size: 20px;
+                }
+
+                .profile-slider{
+                    display: flex;
+                    margin-top: 20px;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    img{
+                        border-radius: 50%;
+                    }
+
+                    .slider-btn{
+                        width: 30px;
+                        height: 30px;
+
+                        i{
+                            font-size: 25px;
+                            transition: 0.3s all;
+
+                            &:hover{
+                                cursor: pointer;
+                                transform: scale(1.3);
+                            }
+                        }
+                    }
+                }
+
+                .profile-info{
+                    width: 100%;
+                    text-align: center;
+                    line-height: 10px;
+                }
+            }
         }
     }
 }
