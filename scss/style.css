@@ -17,6 +17,7 @@ body {
   align-items: center;
   width: 70%;
   margin: 0 15%;
+  height: 100%;
 }
 .navbar .real-nav .logo {
   padding: 10px;
@@ -30,9 +31,9 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  border-left: 1px solid #ccc;
   padding: 0 50px;
   height: 100%;
+  border-left: 1px solid #ccc;
 }
 .navbar .real-nav .search input {
   border-radius: 20px;
@@ -72,10 +73,21 @@ body {
 }
 .navbar .real-nav .notifications {
   display: flex;
+  justify-content: space-between;
+  height: 100%;
+  border-right: 1px solid #ccc;
 }
 .navbar .real-nav .notifications i {
-  margin: 0 10px;
+  margin: 0 5px;
   font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  transition: 0.4s all;
+}
+.navbar .real-nav .notifications i:hover {
+  background: #ccc;
+  cursor: pointer;
 }
 .navbar .real-nav .profile-icon {
   display: flex;
@@ -107,4 +119,217 @@ body {
 .navbar .filter .sub-filter .filter-item:hover {
   cursor: pointer;
   border-bottom: 3px solid rgb(0, 183, 255);
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.144);
+}
+.page .container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 15%;
+}
+.page .container .left-page {
+  width: 30%;
+  text-align: center;
+  background: #fff;
+  height: 35rem;
+  padding: 10px 20px;
+  margin: 20px 15px;
+  line-height: 13px;
+  border-radius: 5px;
+}
+.page .container .left-page .profile-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.page .container .left-page .profile-info .profile-company {
+  font-size: 16px;
+  font-weight: 300;
+}
+.page .container .left-page .profile-info .info {
+  color: rgba(0, 0, 0, 0.356);
+  letter-spacing: -0.5px;
+}
+.page .container .left-page .profile-btns {
+  display: block;
+  width: 100%;
+}
+.page .container .left-page .profile-btns .btn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 1px solid skyblue;
+  color: skyblue;
+  background: #fff;
+  font-size: 18px;
+  transition: 0.3s all;
+}
+.page .container .left-page .profile-btns .btn.bg {
+  color: white;
+  background: skyblue;
+}
+.page .container .left-page .profile-btns .btn:hover {
+  cursor: pointer;
+  background: rgba(135, 207, 235, 0.3);
+}
+.page .container .left-page .profile-btns .btn:hover.bg {
+  background: skyblue;
+}
+.page .container .left-page .profile-btns .btn i {
+  font-size: 20px;
+}
+.page .container .left-page .profile-static {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.page .container .left-page .profile-static .profile-foll {
+  width: 50%;
+  padding: 0 10px;
+}
+.page .container .left-page .profile-static .profile-foll:first-child {
+  border-right: 1px solid #ccc;
+}
+.page .container .left-page .profile-static .profile-foll p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.356);
+  font-weight: 500;
+}
+.page .container .left-page .profile-links {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.page .container .left-page .profile-links .link {
+  text-align: start;
+}
+.page .container .left-page .profile-links .link p {
+  color: rgba(0, 0, 0, 0.356);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s all;
+}
+.page .container .left-page .profile-links .link p:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.656);
+}
+.page .container .left-page .profile-export {
+  color: rgba(0, 0, 0, 0.356);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s all;
+}
+.page .container .left-page .profile-export i {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.page .container .left-page .profile-export:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.556);
+}
+.page .container .center-page {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+}
+.page .container .center-page .posts {
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+}
+.page .container .center-page .posts .header-posts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.page .container .center-page .posts .header-posts .sliders .slider-btn {
+  padding: 5px 6px;
+  border: 1px solid rgb(48, 2, 218);
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s all;
+}
+.page .container .center-page .posts .header-posts .sliders .slider-btn i {
+  color: rgb(48, 2, 218);
+  font-size: 30px;
+}
+.page .container .center-page .posts .header-posts .sliders .slider-btn:hover {
+  cursor: pointer;
+  background: rgb(48, 2, 218);
+}
+.page .container .center-page .posts .header-posts .sliders .slider-btn:hover i {
+  color: #fff;
+}
+.page .container .center-page .posts .posts-content {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.page .container .center-page .posts .posts-content .post {
+  width: 30%;
+  margin: 10px;
+  line-height: 20px;
+}
+.page .container .center-page .posts .posts-content .post p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.page .container .center-page .posts .posts-content .post img {
+  width: 100%;
+}
+.page .container .center-page .posts .posts-content .post small {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.page .container .right-page {
+  width: 30%;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.page .container .right-page .peoples {
+  display: block;
+}
+.page .container .right-page .peoples .header {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.page .container .right-page .peoples .profiles {
+  display: block;
+}
+.page .container .right-page .peoples .profiles .profile {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  line-height: 10px;
+}
+.page .container .right-page .peoples .profiles .profile .profile-text {
+  margin-left: 10px;
+}
+.page .container .right-page .peoples .profiles .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.page .container .right-page .peoples .profiles .profile h2 {
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

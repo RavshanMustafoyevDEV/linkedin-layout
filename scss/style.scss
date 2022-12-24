@@ -3,6 +3,7 @@
 $basic-margin : 0 15%;
 $basic-width : 70%;
 $basic-border:1px solid #ccc;
+$slider-btn-bg:rgb(48, 2, 218);
 
 
 
@@ -25,9 +26,11 @@ body{
         align-items: center;
         width: $basic-width;
         margin: $basic-margin;
+        height: 100%;
 
         .logo{
             padding: 10px;
+
 
             img{
                 width: 50px;
@@ -40,9 +43,9 @@ body{
             justify-content: space-between;
             align-items: center;
             position: relative;
-            border-left: $basic-border;
             padding: 0 50px;
             height: 100%;
+            border-left: $basic-border;
 
 
             input{
@@ -92,11 +95,25 @@ body{
 
         .notifications{
             display: flex;
+            justify-content: space-between;
+            height: 100%;
+            border-right: $basic-border;
             
 
             i{
-                margin: 0 10px;
+                margin: 0 5px;
                 font-size: 20px;
+                padding: 15px;
+                border: none;
+                border-radius: 50%;
+                transition: 0.4s all;
+
+                
+
+                &:hover{
+                    background: #ccc;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -138,9 +155,280 @@ body{
                 &:hover{
                     cursor: pointer;
                     border-bottom: 3px solid rgb(0, 183, 255);
-
                 }
             }
         }
     }
 }
+
+
+
+
+.page{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.144);
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: $basic-width;
+        margin: $basic-margin;
+        
+        .left-page{
+            width: 30%;
+            text-align: center;
+            background: #fff;
+            height: 35rem;
+            
+            padding: 10px 20px;
+            margin: 20px 15px;
+            line-height: 13px;
+            border-radius: 5px;
+    
+            .profile-info{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+
+                .profile-company{
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+
+                .info{
+                    color: rgba(0, 0, 0, 0.356);
+                    letter-spacing: -0.5px;
+                }
+            }
+
+            .profile-btns{
+                display: block;
+                width: 100%;
+
+                .btn{
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 10px 0;
+                    border-radius: 20px;
+                    border: 1px solid skyblue;
+                    color: skyblue;
+                    background: #fff;
+                    font-size: 18px;
+                    transition: 0.3s all;
+
+                    &.bg{
+                        color: white;
+                        background: skyblue;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        background: rgba(135, 207, 235, 0.3);
+
+                        &.bg{
+                            background: skyblue;
+                        }
+                    }
+
+                    i{
+                        font-size: 20px;
+                    }
+
+                }
+            }
+
+            .profile-static{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                border-top: $basic-border;
+                border-bottom: $basic-border;
+
+                .profile-foll{
+                    width: 50%;
+                    padding: 0 10px;
+
+                    &:first-child{
+
+                        border-right: $basic-border;
+                    }
+
+                    p{
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.356);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .profile-links{
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                border-bottom: $basic-border;
+
+                .link{
+                    text-align: start;
+
+                    p{
+                        color: rgba(0, 0, 0, 0.356);
+                        font-size: 16px;
+                        font-weight: 500;
+                        transition: 0.3s all;
+
+                        &:hover{
+                            cursor: pointer;
+                            color: rgba(0, 0, 0, 0.656);
+                        }
+                    }
+                }
+            }
+
+            .profile-export{
+                color: rgba(0, 0, 0, 0.356);
+                display: flex;
+                justify-content: center;
+                width: 100%;
+               
+                align-items: center;
+                font-size: 14px;
+                font-weight: 700;
+                transition: 0.3s all;
+
+                i{
+                    font-size: 20px;
+                    margin-left: 10px;
+                    font-weight: 600;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    color: rgba(0, 0, 0, 0.556);
+                }
+            }
+        }
+
+        .center-page{
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            
+            .posts{
+                display: block;
+                border-radius: 5px;
+                padding: 10px;
+                background: #fff;
+
+                .header-posts{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: $basic-border;
+
+                    .sliders{
+                        .slider-btn{
+                            padding: 5px 6px;
+                            border: 1px solid $slider-btn-bg;
+                            background: #fff;
+                            border-radius: 50%;
+                            transition: 0.3s all;
+
+                            i{
+                                color: $slider-btn-bg;
+                                font-size: 30px;
+                            }
+
+                            &:hover{
+                                cursor: pointer;
+                                background: $slider-btn-bg;
+
+                                i{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .posts-content{
+                    margin-top: 10px;
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+
+                    .post{
+                        width: 30%;
+                        margin: 10px;
+                        line-height: 20px;
+
+                        p{
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+
+                        img{
+                            width: 100%;
+                        }
+
+                        small{
+                            font-size: 16px;
+                            color: rgb(0,0,0, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .right-page{
+            width: 30%;
+            margin: 20px 15px;
+            padding: 10px;
+            border-radius: 5px;
+
+            .peoples{
+                display: block;
+
+                .header{
+                    font-size: 22px;
+                    margin: 10px 0;
+                }
+
+                .profiles{
+                    display: block;
+
+                    .profile{
+                        display: flex;
+                        width: 100%;
+                        justify-content: start;
+                        align-items: center;
+
+                        .profile-text{
+                            margin-left: 10px;
+                        }
+
+                        line-height: 10px;
+
+                        img{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                        }
+
+                        h2{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
